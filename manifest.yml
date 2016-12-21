@@ -1,7 +1,5 @@
 ---
 buildpack: staticfile_buildpack
-memory: 64MB
-name: cf-redirect
-host: redirect-from-domain
-env:
-  TARGET_DOMAIN: redirect-to-domain.apps.cloud.gov
+memory: 512MB
+name: federalist-redirect
+instances: 2
