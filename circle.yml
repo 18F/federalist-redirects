@@ -11,4 +11,4 @@ deployment:
     branch: [master]
     commands:
       - cf login -a https://api.fr.cloud.gov/ -u $CF_REDIRECTS_USER -p $CF_REDIRECTS_PASS -o gsa-18f-federalist -s redirects
-      - cd public && cf push -f manifest.yml
+      - cf push -f manifest.yml
