@@ -1,0 +1,14 @@
+dependencies:
+  pre:
+    - mkdir -p debs
+    - if [ ! -f debs/temp.deb ]; then wget -qO debs/temp.deb https://cli.run.pivotal.io/stable?release=debian64; fi
+    - sudo dpkg -i debs/temp.deb
+  cache_directories:
+    - debs
+
+deployment:
+  production:
+    branch: [master]
+    commands:
+      - cf login -a https://api.fr.cloud.gov/ -u $CF_REDIRECTS_USER -p $CF_REDIRECTS_PASS -o gsa-18f-federalist -s redirects
+      - cd public && cf push -f manifest.yml
