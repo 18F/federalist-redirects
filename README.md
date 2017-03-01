@@ -1,6 +1,6 @@
 # federalist-redirects
 
-Redirects traffic from custom domains to federalist
+Redirects traffic from custom domains to Federalist. Note that despite the name of this app, it is not a core component of the Federalist system.
 
 ## Usage
 
